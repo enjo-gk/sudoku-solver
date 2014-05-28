@@ -4,7 +4,7 @@ import java.util.Set;
 
 import enjogk.Square.Unit;
 
-public class LastPossibleStrat implements Strategy {
+public class LastPossibleSquareStrat implements Strategy {
 
 	@Override
 	public boolean execute(Board b) {
@@ -20,7 +20,7 @@ public class LastPossibleStrat implements Strategy {
 						  lastPossible(pvalue, rowPeers, state) ||
 						  lastPossible(pvalue, colPeers, state);
 				if (lastPossible) {
-					changed = changed || s.setV(pvalue);
+					changed = s.setV(pvalue) || changed;
 					state.updateState(s.getX(), s.getY(), pvalue);
 					break;
 				}

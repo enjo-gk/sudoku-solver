@@ -1,19 +1,13 @@
 package enjogk;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import java.util.LinkedList;
 import java.util.List;
 
 import org.junit.Test;
 
-import enjogk.Board;
-import enjogk.LastPossibleStrat;
-import enjogk.Solver;
-import enjogk.Square;
-import enjogk.Strategy;
-
-public class LastPossibleStratTest {
+public class LastPossibleSquareStratTest {
 
 	@Test
 	public void test() {
@@ -22,7 +16,7 @@ public class LastPossibleStratTest {
 							"41.." +
 							"....");
 		List<Strategy> strats = new LinkedList<>();
-		strats.add(new LastPossibleStrat());
+		strats.add(new LastPossibleSquareStrat());
 		Solver s = new Solver(strats);
 		s.solve(b);
 		assertEquals(false, s.solved(b));

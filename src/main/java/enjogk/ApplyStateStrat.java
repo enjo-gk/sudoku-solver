@@ -19,7 +19,7 @@ public class ApplyStateStrat implements Strategy {
 				Iterator<Integer> it = pv.iterator();
 				int value = it.next();
 				s.updateState(x, y, value);
-				changed = changed || b.getSquare(x, y).setV(value);
+				changed = b.getSquare(x, y).setV(value) || changed;
 			}
 		}
 		return changed;

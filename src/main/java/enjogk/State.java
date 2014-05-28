@@ -45,8 +45,8 @@ public class State {
 		return pValues.get(y*n+x);
 	}
 	
-	public void removePValues(int x, int y, Set<Integer> values){
-		pValues.get(y*n+x).removeAll(values);
+	public boolean removePValues(int x, int y, Set<Integer> values){
+		return pValues.get(y*n+x).removeAll(values);
 	}
 	
 	public void updateState(int x, int y, int v){
