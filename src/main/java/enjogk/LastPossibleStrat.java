@@ -1,8 +1,8 @@
-package enjo;
+package enjogk;
 
 import java.util.Set;
 
-import enjo.Square.Unit;
+import enjogk.Square.Unit;
 
 public class LastPossibleStrat implements Strategy {
 

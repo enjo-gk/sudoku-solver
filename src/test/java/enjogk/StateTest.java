@@ -1,4 +1,4 @@
-package enjo;
+package enjogk;
 
 import static org.junit.Assert.assertEquals;
 
@@ -8,8 +8,8 @@ import java.util.Set;
 import org.junit.Before;
 import org.junit.Test;
 
-import enjo.Board;
-import enjo.State;
+import enjogk.Board;
+import enjogk.State;
 
 
 public class StateTest {

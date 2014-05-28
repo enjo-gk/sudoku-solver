@@ -1,4 +1,4 @@
-package enjo;
+package enjogk;
 
 
 public interface Strategy {

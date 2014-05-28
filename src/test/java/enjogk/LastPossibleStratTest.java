@@ -1,4 +1,4 @@
-package enjo;
+package enjogk;
 
 import static org.junit.Assert.*;
 
@@ -6,6 +6,12 @@ import java.util.LinkedList;
 import java.util.List;
 
 import org.junit.Test;
+
+import enjogk.Board;
+import enjogk.LastPossibleStrat;
+import enjogk.Solver;
+import enjogk.Square;
+import enjogk.Strategy;
 
 public class LastPossibleStratTest {
 

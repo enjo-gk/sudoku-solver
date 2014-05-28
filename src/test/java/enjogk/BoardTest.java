@@ -1,4 +1,4 @@
-package enjo;
+package enjogk;
 
 import static org.junit.Assert.*;
 
@@ -12,8 +12,8 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import enjo.Board;
-import enjo.Square;
+import enjogk.Board;
+import enjogk.Square;
 
 public class BoardTest {
 

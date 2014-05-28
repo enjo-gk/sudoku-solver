@@ -1,4 +1,4 @@
-package enjo;
+package enjogk;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
@@ -8,9 +8,9 @@ import java.util.List;
 
 import org.junit.Test;
 
-import enjo.Board;
-import enjo.Solver;
-import enjo.Strategy;
+import enjogk.Board;
+import enjogk.Solver;
+import enjogk.Strategy;
 
 
 public class SolverTest {

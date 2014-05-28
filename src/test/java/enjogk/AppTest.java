@@ -1,4 +1,4 @@
-package enjo;
+package enjogk;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
