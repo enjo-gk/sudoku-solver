@@ -18,6 +18,7 @@ public class Solver {
 			fixpoint = true;
 			for (Strategy strat : strats){
 				 if (strat.execute(b)){
+					 System.out.println(strat);
 					 fixpoint = false;
 					 break;
 				 };

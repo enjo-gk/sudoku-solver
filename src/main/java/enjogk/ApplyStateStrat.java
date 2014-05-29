@@ -25,6 +25,8 @@ public class ApplyStateStrat implements Strategy {
 		return changed;
 	}
 	
-	
+	public String toString(){
+		return "ApplyState";
+	}
 
 }

@@ -1,6 +1,7 @@
 package enjogk;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -16,6 +17,40 @@ public class Board implements Iterable<Square> {
 	}
 
 	private State state;
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + Arrays.hashCode(squares);
+		result = prime * result + ((state == null) ? 0 : state.hashCode());
+		result = prime * result + xBox;
+		result = prime * result + yBox;
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Board other = (Board) obj;
+		if (!Arrays.deepEquals(squares, other.squares))
+			return false;
+		if (state == null) {
+			if (other.state != null)
+				return false;
+		} else if (!state.equals(other.state))
+			return false;
+		if (xBox != other.xBox)
+			return false;
+		if (yBox != other.yBox)
+			return false;
+		return true;
+	}
+
 	private Square[][] squares;
 	private int xBox, yBox;
 	

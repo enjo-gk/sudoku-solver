@@ -62,5 +62,25 @@ public class LastPossibleSetStratTest {
 		s.solve(b);
 		assertEquals(false, s.solved(b));
 	}
+	
+	@Test
+	public void testSudoku() {
+		String s = "8...9...2"
+				+ "7......9."
+				+ "..92....5"
+				+ "64.8....."
+				+ "2.51.69.7"
+				+ ".....5.86"
+				+ "4....27.."
+				+ ".6......1"
+				+ "9...6...4";
+		Board board = new Board(s);
+		List<Strategy> strats = new LinkedList<>();
+		strats.add(new LastPossibleSquareStrat());
+		strats.add(new LastPossibleSetStrat());
+		Solver solver = new Solver(strats);
+		solver.solve(board);
+		assertEquals(false, solver.solved(board));
+	}
 
 }

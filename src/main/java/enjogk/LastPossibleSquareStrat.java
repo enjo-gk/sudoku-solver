@@ -7,6 +7,7 @@ import enjogk.Square.Unit;
 public class LastPossibleSquareStrat implements Strategy {
 
 	@Override
+	//TODO: Write more tests for this guy. Seems incomplete.
 	public boolean execute(Board b) {
 		boolean changed = false;
 		State state = b.getState();
@@ -35,6 +36,10 @@ public class LastPossibleSquareStrat implements Strategy {
 			if (pvalues.contains(pvalue)) return false;
 		}
 		return true;
+	}
+	
+	public String toString(){
+		return "LPSquare";
 	}
 
 }

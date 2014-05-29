@@ -41,8 +41,36 @@ public class State {
 		}
 	}
 	
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + n;
+		result = prime * result + ((pValues == null) ? 0 : pValues.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		State other = (State) obj;
+		if (n != other.n)
+			return false;
+		if (pValues == null) {
+			if (other.pValues != null)
+				return false;
+		} else if (!pValues.equals(other.pValues))
+			return false;
+		return true;
+	}
+
 	public Set<Integer> getPValues(int x, int y){
-		return pValues.get(y*n+x);
+		return new HashSet<Integer>(pValues.get(y*n+x));
 	}
 	
 	public boolean removePValues(int x, int y, Set<Integer> values){
